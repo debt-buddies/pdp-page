@@ -8,7 +8,7 @@ function App() {
   return (
     <div className="main">
       <Suspense fallback={<div>loading header...</div>}>
-        <Header subtitle="for main" />
+        <Header subtitle="for main" bgColor="grey" />
       </Suspense>
       <div className="mainContent">Ini main nya loh</div>
     </div>
