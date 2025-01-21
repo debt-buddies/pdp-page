@@ -15,14 +15,13 @@ function App() {
 
 const MainContent = () => {
   const {
-    todos: { previewContent, listTodos },
+    todos: { previewContent, detail },
   } = useStoreSelector((state) => state);
 
   const { addTodos } = useStore();
 
   const [text, setText] = useState("");
 
-  console.log(listTodos);
   const handleSubmit = (e) => {
     if (e.key === "Enter") {
       addTodos(text);
@@ -43,7 +42,7 @@ const MainContent = () => {
     );
   }
 
-  return <div className="input-container">apa aja untuk tes aja ini mah!!!</div>;
+  return <div className="input-container">{detail}</div>;
 };
 
 export default App;
